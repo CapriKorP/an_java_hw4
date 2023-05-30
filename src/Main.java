@@ -27,7 +27,7 @@ public class Main {
             }
 
             int operation = Integer.parseInt(input);
-            int x = CalcTaxService.taxEarningsMinusSpendings(earnings,spendings);
+            int x = CalcTaxService.taxEarningsMinusSpendings(earnings, spendings);
             int y = CalcTaxService.taxEarningsSixPercent(earnings);
 
             switch (operation) {
@@ -44,10 +44,10 @@ public class Main {
                     spendings += outgo;
                     break;
                 case 3:
-                    if(x > y) {
+                    if (x > y) {
                         System.out.println(">>> Мы предлагаем Вам перейти на УСН Доход");
-                        System.out.println("Ваш налог составил: " + y +" руб.");
-                        System.out.println("Налог по УСН ДоходРасход составил: " + x +" руб.");
+                        System.out.println("Ваш налог составил: " + y + " руб.");
+                        System.out.println("Налог по УСН ДоходРасход составил: " + x + " руб.");
                         System.out.println("Ваша экономия составила: " + (x - y) + " руб.");
                         System.out.println();
                     } else if (x == y) {
@@ -55,8 +55,8 @@ public class Main {
                         System.out.println();
                     } else {
                         System.out.println(">>> Мы предлагаем Вам перейти на УСН ДоходРасход");
-                        System.out.println("Ваш налог составил: " + x +" руб.");
-                        System.out.println("Налог по УСН Доход составил: " + y +" руб.");
+                        System.out.println("Ваш налог составил: " + x + " руб.");
+                        System.out.println("Налог по УСН Доход составил: " + y + " руб.");
                         System.out.println("Ваша экономия составила: " + (y - x) + " руб.");
                         System.out.println();
                     }
